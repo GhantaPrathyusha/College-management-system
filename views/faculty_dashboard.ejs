@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #16aff5;
+            padding: 10px 20px;
+            text-align: center;
+            color: rgb(15, 15, 15);
+        }
+        .navbar a {
+            color: rgb(41, 37, 37);
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            background-color: #a9e5f4;
+            border-radius: 5px;
+        }
+        .dashboard {
+            display: flex;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #16aff5;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(23, 1, 1, 0.916);
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 10px 0;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .main-content h1 {
+            color: #f9f4f4;
+        }
+        .main-content p {
+            font-size: 18px;
+        }
+        .attendance, .timetable-link, .exam-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Welcome to the Faculty Dashboard</h1>
+        <nav>
+            <a href="/faculty/messages">Messages</a>
+            <a href="/faculty/marks">Student Marks</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </div>
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Your Information</h2>
+            <ul>
+                <li><strong>Username:</strong> <%= faculty.username %></li>
+                <li><strong>Name:</strong> <%= faculty.name %></li>
+                <li><strong>Email:</strong> <%= faculty.email %></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Welcome, <%= faculty.name %>!</h1>
+            <p>Explore your dashboard to view student <strong>marks</strong> and <strong>communicate</strong> with students.</p>
+        </div>
+    </div>
+</body>
+</html>

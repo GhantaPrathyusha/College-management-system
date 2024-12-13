@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - <%= student.name %></title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <h1>Attendance for <%= student.name %>!</h1> <!-- Personalized greeting -->
+        <nav>
+            <a href="/student/dashboard" style= color:black ></i>Dashboard</a>
+            <a href="/logout" style= color:black ></i>Logout</a>
+        </nav>
+    </div>
+    
+    <div class="attendance-container">
+        <h2>Your Attendance</h2>
+        
+        <!-- Attendance Table displaying records from the database -->
+        <table class="attendance-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Attendance Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% attendance.forEach(function(record) { %>
+                    <tr>
+                        <td><%= record.subject %></td>
+                        <td><%= record.percentage %>%</td> <!-- Display percentage symbol -->
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

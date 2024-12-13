@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Messages</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Faculty Messages</h1>
+        <nav>
+            <a href="/faculty/dashboard" style="color:black;">Back to Dashboard</a>
+            <a href="/logout" style="color:black;">Logout</a>
+        </nav>
+    </div>
+    <div class="dashboard">
+        <div class="main-content">
+            <h2 style="color:white;">Messages to Students</h2>
+            <ul>
+                <li><strong>Alice Smith:</strong> "Please attend the remedial classes." </li>
+                <li><strong>Bob Johnson:</strong> "Great progress in History!"</li>
+                <li><strong>Charlie Brown:</strong> "Make sure to submit your project by Friday."</li>
+            </ul>
+            <form action="/faculty/messages" method="POST">
+                <label for="message">Send a message to students:</label><br>
+                <textarea name="message" id="message" rows="4" cols="42"></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

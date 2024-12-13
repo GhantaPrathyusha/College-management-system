@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            text-align: center;
+            color: rgb(22, 22, 22);
+        }
+        .navbar a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .main-content {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .message {
+            font-size: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Exams</h1>
+        <nav>
+            <a href="/student/dashboard" style="color: black;" aria-hidden="true"></i>Back to Dashboard</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1 style="color: white; text-align: center;">Your Exam Status</h1>
+        <p class="message"><%= message %></p>
+    </div>
+</body>
+</html>

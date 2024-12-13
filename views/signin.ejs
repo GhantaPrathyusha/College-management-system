@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="signin-container">
+        <!-- Heading -->
+        <h2 class="signin-heading">Choose your sign-in option</h2>
+
+        <!-- Display error message if any -->
+        <% if (errorMessage) { %>
+            <p class="error-message"><%= errorMessage %></p>
+        <% } %>
+
+        <!-- Sign-In Form -->
+        <form action="/signin" method="POST">
+            <label for="role">Login as</label>
+            <select id="role" name="role" required>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+            </select>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Additional sign-in options -->
+        <p>Or sign in with:</p>
+        <button class="google-signin-btn">Sign in with Google</button>
+    </div>
+</body>
+</html>

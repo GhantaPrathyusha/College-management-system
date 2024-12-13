@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - <%= student.name %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="attendance-page">
+        <h1>Attendance for <%= student.name %></h1>
+
+        <!-- Attendance Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Attendance Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% student.attendance.forEach((subject) => { %>
+                    <tr>
+                        <td><%= subject.subject %></td>
+                        <td><%= subject.percentage %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

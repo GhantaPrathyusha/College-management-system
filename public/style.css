@@ -1,0 +1,464 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://i.pinimg.com/564x/07/f5/c5/07f5c5df715a1acf77cb3deb53325aad.jpg') no-repeat center center fixed;
+    background-size: cover; /* Makes the image cover the entire background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0f8ff;
+}
+
+/* Main Content Styles */
+h2 {
+    margin-top: 20px;
+    font-size: 2.2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Sign-In and Navigation Buttons */
+a, button {
+    background-color: #2d7fa5;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a:hover, button:hover {
+    background-color: #0056b3;
+}
+
+/* Container for Sign-In Choices */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container a {
+    display: inline-block;
+    min-width: 140px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Sign-In Form Styling */
+form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #333;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    background-color: #007bff;
+    padding: 12px;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Home Page Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    background: #007bff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: #007bff;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #f4f6f8;
+    color: #0056b3;
+}
+
+/* Section Styling on Home Page */
+section {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2em;
+    }
+
+    .container, nav {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: #121010;
+}
+
+/* Responsive Design for Tables */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Sign-In Link */
+.sign-in-link {
+    background-color: #2d7fa5;
+    color: #1d1919;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-link:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #070000;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #a7c8ec;
+}
+
+/* Styling for individual pages */
+h2 {
+    text-align: center;
+}
+
+
+
+/* Attendance Page Specific Styles */
+.attendance-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    color:#e1e1e1;
+}
+
+.attendance-container h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attendance-container h3 {
+    font-size: 1.5em;
+    color: #fbfafa;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.attendance-table th, .attendance-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.attendance-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.attendance-table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.attendance-table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+.attendance-table tr:hover td {
+    background-color: #e1e1e1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .attendance-container {
+        width: 90%;
+    }
+
+    .attendance-table th, .attendance-table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+
+/* Exam Page Styling */
+.exam-page {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exam-page h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exam-page .message {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.exam-page .exam-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.exam-page .exam-link a {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.exam-page .exam-link a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Exam Page */
+@media (max-width: 768px) {
+    .exam-page {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .exam-page h1 {
+        font-size: 1.8em;
+    }
+
+    .exam-page .message {
+        font-size: 1em;
+    }
+
+    .exam-page .exam-link a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
